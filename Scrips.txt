@@ -1,0 +1,56 @@
+mutation {
+  createPost(data: {id: 12, description: "wwww", videoUrl: "eeee", createdAt: "2011-03-20"}) {
+    createdAt
+    description
+    id
+    videoUrl
+  }
+}
+
+mutation {
+  createComments(data: {id: 12, description: "xxx", createdAt: "2020-02-05", postId: 7}) {
+    id
+    description
+    createdAt
+    postId
+  }
+}
+
+query{
+  posts{
+    id
+    description
+    videoUrl
+    createdAt
+  }
+}
+
+query{
+  postsId(id: 1) {
+    id
+    description
+    videoUrl
+    createdAt
+  }
+  
+}
+
+query{
+  comments {
+    id
+    description
+    createdAt
+    postId
+  }
+}
+
+query{
+  commentsId(id: 1) {
+    id
+    createdAt
+    description
+    postId
+  }
+}
+
+
